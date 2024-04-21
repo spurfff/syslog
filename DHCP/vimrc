@@ -1,0 +1,11 @@
+" Access some pre-built environment variables
+let dhcp_conf_file = getenv('DHCP_CONF_FILE')
+
+" Turn on syntax globally
+syntax on
+
+" Number lines
+set number
+
+" Set JSON syntax for specific file types
+autocmd BufNewFile,BufRead dhcp_conf_file set filetype=json

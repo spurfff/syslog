@@ -1,0 +1,8 @@
+zone "continuant.local" {
+        type master;
+        file "/etc/bind/zones/forward.wired.net";
+};
+zone "0.11.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/zones/reverse.wired.net";
+};        

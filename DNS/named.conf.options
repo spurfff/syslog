@@ -1,0 +1,24 @@
+acl "trusted" {
+        10.11.0.0/24;
+};
+
+options {
+        directory "/var/cache/bind";
+        allow-query { localhost; trusted; };
+        allow-transfer { none; };
+        allow-recursion { localhost; trusted; };
+        listen-on { any; };
+        auth-nxdomain no;
+        forwarders { 10.11.0.2; 1.1.1.1; 1.0.0.1; };
+
+        logging {
+                channel syslog {
+                        print-time yes;
+                        print-category yes;
+                        print severity yes;
+                        syslog daemon;
+                        severity info;
+                };
+                category default { syslog; };
+        };
+};

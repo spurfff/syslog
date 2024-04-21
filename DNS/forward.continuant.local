@@ -1,0 +1,14 @@
+;
+; BIND data file for forward lookups 
+;
+$TTL    604800
+@       IN      SOA     dns.continuant.local. root.continuant.local. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@                               IN      NS      dns.continuant.local.
+dns.continuant.local            IN      A       10.11.0.2
+syslogMaster.continuant.local   IN      A       10.11.0.4
