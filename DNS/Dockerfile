@@ -26,4 +26,6 @@ COPY vimrc /root/.vim
 
 WORKDIR /root
 
+EXPOSE 53
+
 CMD ["named", "-g"]
